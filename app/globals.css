@@ -1,0 +1,238 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&family=Kaushan+Script&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  background-color: #e7ecef;
+  overflow-x: hidden;
+}
+
+/* signup carousel animation */
+.signupCarouselItem1 {
+  width: 37%;
+  height: 32rem;
+  opacity: 100%;
+  position: relative;
+  animation: slide1 5s ease-in-out infinite;
+}
+.signupCarouselItem2 {
+  width: 36%;
+  height: 30rem;
+  opacity: 40%;
+  position: relative;
+  animation: slide2 5s ease-in-out infinite;
+}
+.signupCarouselItem3 {
+  width: 36%;
+  height: 30rem;
+  opacity: 40%;
+  position: relative;
+  animation: slide3 5s ease-in-out infinite;
+}
+
+/* firt card animation */
+@keyframes slide1 {
+  0% {
+    left: 0;
+  }
+  12% {
+    left: -410px;
+    width: 36%;
+    height: 30rem;
+    opacity: 40%;
+  }
+  24% {
+    left: -410px;
+    width: 36%;
+    height: 30rem;
+    opacity: 40%;
+  }
+  36% {
+    left: -700px;
+    width: 36%;
+    height: 30rem;
+    opacity: 40%;
+  }
+  48% {
+    left: -700px;
+    width: 36%;
+    height: 30rem;
+    opacity: 40%;
+  }
+  60% {
+    left: -410px;
+    width: 36%;
+    height: 30rem;
+    opacity: 40%;
+  }
+  72% {
+    left: -410px;
+    width: 36%;
+    height: 30rem;
+    opacity: 40%;
+  }
+  84% {
+    left: 0;
+    width: 37%;
+    height: 32rem;
+    opacity: 100%;
+  }
+}
+
+/* second card animation */
+@keyframes slide2 {
+  0% {
+    left: 0;
+  }
+  12% {
+    left: -390px;
+    width: 37%;
+    height: 32rem;
+    opacity: 100%;
+  }
+  24% {
+    left: -390px;
+    width: 37%;
+    height: 32rem;
+    opacity: 100%;
+  }
+  36% {
+    left: -820px;
+    width: 36%;
+    height: 30rem;
+    opacity: 40%;
+  }
+  48% {
+    left: -820px;
+    width: 36%;
+    height: 30rem;
+    opacity: 40%;
+  }
+  60% {
+    left: -390px;
+    width: 36%;
+    width: 37%;
+    height: 32rem;
+    opacity: 100%;
+  }
+  72% {
+    left: -390px;
+    width: 36%;
+    width: 37%;
+    height: 32rem;
+    opacity: 100%;
+  }
+  84% {
+    left: 0;
+    width: 36%;
+    height: 30rem;
+    opacity: 40%;
+  }
+}
+
+/* third card animation */
+@keyframes slide3 {
+  0% {
+    left: 0;
+    width: 36%;
+    height: 30rem;
+    opacity: 40%;
+  }
+  12% {
+    left: -380px;
+    width: 36%;
+    height: 30rem;
+    opacity: 40%;
+  }
+  24% {
+    left: -380px;
+    width: 36%;
+    height: 30rem;
+    opacity: 40%;
+  }
+  36% {
+    left: -760px;
+    width: 37%;
+    height: 32rem;
+    opacity: 100%;
+  }
+  48% {
+    left: -760px;
+    width: 37%;
+    height: 32rem;
+    opacity: 100%;
+  }
+  60% {
+    left: -380px;
+    width: 36%;
+    height: 30rem;
+    opacity: 40%;
+  }
+  72% {
+    left: -380px;
+    width: 36%;
+    height: 30rem;
+    opacity: 40%;
+  }
+  84% {
+    left: 0;
+  }
+}
+
+/* drop down animation */
+.dropDownList {
+  height: 10rem;
+  overflow: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+.dropDownListActive {
+  height: 0;
+  overflow: hidden;
+}
+
+/* stroke effect for text */
+/* stroke text  */
+.stroke {
+  color: transparent; 
+  -webkit-text-stroke-width: 5px;
+  -webkit-text-stroke-color: #000000;
+}
+
+/* hiding scrollbar (but it is still scrollable */
+.hideScrollBar::-webkit-scrollbar {
+  display: none;
+}
+
+/* fixed navigation bar transition */
+.navbar {
+  opacity: 0%;
+  position: relative;
+  top: -150px;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in, top 0.1s ease-in;
+}
+.navbarActive {
+  display: flex;
+  gap: 3;
+  flex-direction: column;
+  position: relative;
+  top: 0;
+  height: auto;
+  opacity: 100%;
+}
+
+/* mobile navigation bar transition */
+.mobileNavbar {
+  position: fixed;
+  right: -100vw;
+  transition: right 0.2s ease;
+}
+
+.mobileNavbar.mobileNavbarActive {
+  position: fixed;
+  right: 0;
+}
